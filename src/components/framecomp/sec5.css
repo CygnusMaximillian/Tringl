@@ -1,0 +1,107 @@
+.sec5 {
+  width: 100%;
+  height: 516px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
+.sec5-background {
+  width: 100%;
+  height: 100%;
+  background-image: url('frameimg2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.sec5-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.1) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sec5-content {
+  text-align: center;
+  color: white;
+  max-width: 600px;
+  padding: 0 24px;
+}
+
+.sec5-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  line-height: 1.2;
+}
+
+.sec5-subtitle {
+  font-size: 20px;
+  margin-bottom: 32px;
+  opacity: 0.95;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  line-height: 1.4;
+}
+
+.sec5-button {
+  background-color: #059669;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+  font-family: inherit;
+}
+
+.sec5-button:hover {
+  background-color: #047857;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.4);
+}
+
+.sec5-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sec5-title {
+    font-size: 36px;
+  }
+  
+  .sec5-subtitle {
+    font-size: 18px;
+  }
+  
+  .sec5-button {
+    padding: 14px 28px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .sec5-title {
+    font-size: 28px;
+  }
+  
+  .sec5-subtitle {
+    font-size: 16px;
+  }
+  
+  .sec5-button {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+}

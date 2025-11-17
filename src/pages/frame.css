@@ -1,0 +1,176 @@
+.frameimg {
+  width: 100%;
+  height: 800px;
+  background-image: url('../components/frameimg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sec1{
+  height: 446px;
+  width: 88%;
+  margin-top: 130px;
+  padding-top: 111px;
+  
+}
+
+.text-container{
+  height: 345px;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  width: 50%;
+  margin-left: 64px;
+  
+}
+
+.text-container > h1 {
+  color: white;
+  font-weight: 700;
+  font-size: 60px;
+}
+
+.text-container > h5 {
+  color: #E5E7EB;
+  font-weight: 400;
+  font-size: 20px;
+
+}
+
+.form-container {
+  background-color: white;
+  width: 768px;
+  height: 98px;
+  margin-left: 0px;
+  border-radius: 16px;
+  border: 1px solid #E5E7EB;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+/* lay out inputs and button in one row */
+.form-container form {
+  display: flex;
+  align-items: center;
+  gap: 7px;               /* ensure spacing without wrapping */
+  flex-wrap: nowrap;       /* keep all controls on one line */
+}
+
+.input-group {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.input-group .input-icon {
+  position: absolute;
+  left: 12px;
+  color: #9CA3AF;
+  pointer-events: none;
+}
+
+.input-group input {
+  padding-left: 38px; /* room for icon */
+}
+
+/* Placeholder styles */
+input::placeholder {
+  color: #9CA3AF; /* similar to border */
+  font-weight: 200;
+}
+
+/* Firefox placeholder/date text color */
+@-moz-document url-prefix() {
+  input::placeholder { color: #9CA3AF; font-weight: 200; }
+  input[type="date"] { color: #9CA3AF; font-weight: 200; }
+}
+
+input {
+  margin-right: 0; /* use flex gap instead for uniform spacing */
+  height: 50px;
+  width: 160px;
+  border: 1px solid #E5E7EB;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  box-shadow: none;
+  outline: none;
+  background-clip: padding-box;
+}
+
+/* Normalize input focus/hover to keep borders uniform */
+input:hover,
+input:focus {
+  border-color: #059669; /* optional: brand highlight */
+  box-shadow: none;
+  outline: none;
+}
+
+/* Make date input's dd-mm-yy text match placeholder styling (Chromium/WebKit) */
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  color: #9CA3AF;    /* similar to border */
+  font-weight: 200;  /* light weight like placeholders */
+}
+
+/* Hide calendar icon on Firefox */
+@-moz-document url-prefix() {
+  input[type="date"]::-moz-focus-inner { border: 0; }
+  input[type="date"] { background-image: none !important; }
+}
+
+/* Recolor the native calendar icon on the right to a soft gray */
+/* Hide the native right calendar icon (Chromium/WebKit) */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+/* Neutralize native styling that can reintroduce icons */
+input[type="date"] {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 12px; /* ensure no cramped text on the right */
+}
+
+/* button styles to match input height and look */
+.form-container button {
+  height: 50px;
+  padding: 0 16px;
+  border-radius: 8px;
+  border: 1px solid #059669;
+  background-color: #059669;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-weight: 200;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;     
+  flex: 0 0 auto;          
+  cursor: pointer;
+  box-shadow: none;
+  outline: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.form-container button:hover {
+  background-color: #047857;
+  border-color: #047857;
+}
+
+.form-container button:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+.form-container button:disabled {
+  background-color: #9ca3af;
+  border-color: #9ca3af;
+  cursor: not-allowed;
+}
