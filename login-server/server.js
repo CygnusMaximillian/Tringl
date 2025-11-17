@@ -3,6 +3,9 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const { z } = require("zod");
 const jwt = require("jsonwebtoken");
+require("dotenv").config();
+
+const MON_URI = process.env.MON_URI;
 
 const app = express();
 app.use(express.json());
@@ -17,7 +20,7 @@ const JWT_SECRET = "supersecretkey";
 
 
 mongoose
-  .connect("mongodb+srv://Ygnus:k7nvyTUJjKT6x4Nn@cluster0.edtysvr.mongodb.net/user_verification")
+  .connect(MON_URI)
   .then(() => console.log("✅ MongoDB connected"))
   .catch((err) => console.log("❌ MongoDB error", err));
 
