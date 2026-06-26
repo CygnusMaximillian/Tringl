@@ -123,4 +123,4 @@ The application is fully responsive with breakpoints at:
 - Multi-language support
 - Advanced search filters
 - Wishlist functionality
-- Social sharing features
+- Social sharing feature
